@@ -53,6 +53,15 @@ body {
 img {
 	max-width: 100%;
 }
+button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+ul {
+	list-style: none;
+}
 
 .img-responsive {
 	display: block;
