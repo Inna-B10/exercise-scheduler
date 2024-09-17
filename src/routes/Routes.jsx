@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import useAuth from '../hooks/useAuth'
 import NotFound from './../pages/not-found/NotFound'
 import { routes } from './routes.data.js'
@@ -7,7 +7,7 @@ const Router = () => {
 	const { isAuth } = useAuth()
 
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<Routes>
 				{/* TODO: Auth routes */}
 				{routes.map(route => (
@@ -19,7 +19,7 @@ const Router = () => {
 				))}
 				<Route path='*' element={<NotFound />} />
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	)
 }
 
