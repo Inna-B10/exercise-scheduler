@@ -8,7 +8,7 @@ const Router = () => {
 
 	return (
 		<HashRouter>
-			<Routes>
+			<Routes>      
 				{/* TODO: Auth routes */}
 				{routes.map(route => (
 					<Route
