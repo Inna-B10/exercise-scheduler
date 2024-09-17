@@ -8,6 +8,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
 	&:focus {
 		outline: none;
 	}
@@ -17,6 +18,7 @@
 	color: #c0c0c0;
 	opacity: 1;
 }
+
 *:-moz-placeholder {
 	color: #c0c0c0;
 	opacity: 1;
@@ -53,12 +55,14 @@ body {
 img {
 	max-width: 100%;
 }
+
 button {
 	background-color: transparent;
 	border: none;
 	outline: none;
 	cursor: pointer;
 }
+
 ul {
 	list-style: none;
 }
@@ -71,4 +75,7 @@ ul {
 
 #root {
 	height: 100%;
+	// max-width: 800px;
+	// margin: 0 auto;
+	// padding: 10px;
 }

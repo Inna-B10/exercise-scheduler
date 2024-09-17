@@ -10,11 +10,11 @@ const Header = ({ backLink }) => {
 		<header className={styles.header}>
 			{isAuth ? (
 				<button>
-					<LiaUserCircleSolid color='white' />
+					<LiaUserCircleSolid />
 				</button>
 			) : (
 				<button onClick={() => {}}>
-					<BsArrowLeft color='white' />
+					<BsArrowLeft />
 				</button>
 			)}
 			<Hamburger />

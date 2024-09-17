@@ -5,10 +5,11 @@
 	justify-content: space-between;
 	align-items: center;
 
-	// > button {
-	// 	background-color: transparent;
-	// 	border: none;
-	// 	outline: none;
-	// 	cursor: pointer;
-	// }
+	> button {
+		font-size: 20px;
+
+		> svg > path {
+			fill: #fff;
+		}
+	}
 }
