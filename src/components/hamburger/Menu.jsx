@@ -1,6 +1,7 @@
 import cn from 'clsx'
-import { menu } from './menu.data.js'
+import { NavLink } from 'react-router-dom'
 import styles from './Hamburger.module.scss'
+import { menu } from './menu.data.js'
 
 const Menu = isVisible => {
 	const handleLogout = () => {}
@@ -9,7 +10,7 @@ const Menu = isVisible => {
 		<nav className={cn(styles.menu, { [styles.show]: isVisible })}>
 			<ul>
 				{menu.map((item, index) => (
-					<li key={index}>{/* <Link to={item.link}>{item.title}</Link> */}</li>
+					<li key={index}>{<NavLink to={item.link}>{item.title}</NavLink>}</li>
 				))}
 				<li>
 					<button onClick={handleLogout}>Log out</button>

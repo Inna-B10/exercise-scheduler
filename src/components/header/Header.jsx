@@ -1,6 +1,6 @@
 import { BsArrowLeft } from 'react-icons/bs'
 import { LiaUserCircleSolid } from 'react-icons/lia'
-import useAuth from '../../../hooks/useAuth'
+import useAuth from '../../hooks/useAuth'
 import Hamburger from '../hamburger/Hamburger'
 import styles from './Header.module.scss'
 

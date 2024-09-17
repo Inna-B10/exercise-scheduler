@@ -1,14 +1,18 @@
 export const menu = [
 	{
+		title: 'Home',
+		link: '/'
+	},
+	{
 		title: 'Workouts',
-		link: 'workouts'
+		link: '/workouts'
 	},
 	{
 		title: 'Create new',
-		link: 'new-workout'
+		link: '/new-workout'
 	},
 	{
 		title: 'Profile',
-		link: 'profile'
+		link: '/profile'
 	}
 ]
