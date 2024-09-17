@@ -17,6 +17,13 @@ npm install -g sass
 npm i react-icons --save
 
 npm i clsx
+
+npm install react-router-dom
+
+npm i @uidotdev/usehooks
+
+npm install --save-dev @trivago/prettier-plugin-sort-imports
+npm install -D prettier
 ```
 
 ### TO DO

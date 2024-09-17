@@ -7,13 +7,15 @@
 	"jsxSingleQuote": true,
 	"arrowParens": "avoid",
 		"importOrder": [
+		"^(react/(.*)$)|^(react$)",
+    "^(next/(.*)$)|^(next$)",
 		"<THIRD_PARTY_MODULES>",
+		"/lib/",
 		"/hooks/",
 		"/screens/",
 		"/components/",
-		"^../(.*)",
-		"^./(.*)",
-		"/module.scss/"
+    "^[./](?!.*\\.(scss|css|sass)$)",
+		"\\.(scss|css|sass)$"
 	],
 	"importOrderSortSpecifiers": true,
 	"plugins": ["@trivago/prettier-plugin-sort-imports"]
