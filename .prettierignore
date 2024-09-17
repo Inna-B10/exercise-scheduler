@@ -1,0 +1,14 @@
+node_modules
+dist
+out
+build
+.next
+.vercel
+.vscode-test
+.gitignore
+.prettierrc
+*.html
+
+package.json
+package-lock.json
+README.md
