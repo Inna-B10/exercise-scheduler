@@ -28,4 +28,5 @@ npm install -D prettier
 
 ### TO DO
 
-[ ] React router useHistory
+[x] React router useHistory
+[ ] Home page, bg images
