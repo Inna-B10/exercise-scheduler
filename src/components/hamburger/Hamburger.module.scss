@@ -5,7 +5,7 @@
 	position: relative;
 
 	> button {
-		font-size: 20px;
+		font-size: 30px;
 
 		> svg > path {
 			fill: #fff;
@@ -18,7 +18,7 @@
 		right: 0;
 		background-color: #fff;
 		padding: 10px 12px;
-		font-size: 14px;
+		font-size: 16px;
 		box-shadow: $bx-16;
 		border-radius: 10px 0 10px 10px;
 		min-width: 116px;
@@ -29,15 +29,24 @@
 			display: block;
 		}
 
-		> ul a {
-			color: #000;
-			text-decoration: none;
-			transition: color 0.2s ease;
+		> ul {
+			button {
+				font-size: 16px;
 
-			&:hover,
-			&.active {
-				color: $accent;
-				margin: 4px 0;
+				&:hover {
+					color: $accent;
+				}
+			}
+
+			a {
+				transition: color 0.2s ease;
+				color: #000;
+
+				&:hover,
+				&.active {
+					color: $accent;
+					margin: 4px 0;
+				}
 			}
 		}
 	}

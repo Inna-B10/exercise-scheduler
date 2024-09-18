@@ -9,14 +9,18 @@ const Router = () => {
 	return (
 		<HashRouter>
 			<Routes>      
-				{/* TODO: Auth routes */}
-				{routes.map(route => (
+				{routes.map(route => {
+          if (route.auth && !isAuth){
+            return false
+          }
+          return(
 					<Route
 						key={route.path}
-						path={route.path}
-						element={<route.component />}
+            path={route.path}
+            element={<route.component />}
 					/>
-				))}
+          )
+})}
 				<Route path='*' element={<NotFound />} />
 			</Routes>
 		</HashRouter>
