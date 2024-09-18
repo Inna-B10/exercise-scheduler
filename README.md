@@ -9,18 +9,18 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-```
+``` js
 npm install gh-pages --save-dev
 
 npm install -g sass
 
 npm i react-icons --save
 
-npm i clsx
+npm i clsx    /*conditionally className*/
 
 npm install react-router-dom
 
-npm i @uidotdev/usehooks
+npm i @uidotdev/usehooks    /*custom hooks*/
 
 npm install --save-dev @trivago/prettier-plugin-sort-imports
 npm install -D prettier
@@ -28,5 +28,6 @@ npm install -D prettier
 
 ### TO DO
 
-[x] React router useHistory
-[ ] Home page, bg images
+- [x] React router useHistory
+- [x] Home page, bg images
+- [ ] Counters
