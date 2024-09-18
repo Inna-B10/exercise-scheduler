@@ -1,0 +1,33 @@
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/animations';
+$accent-04: rgba($accent, 0.4);
+
+.button {
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 13px 48px;
+  transition: background-color 0.15s ease;
+  background-color: $accent-04;
+  color: #fff;
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    padding: 12px 38px;
+  }
+
+  &:hover {
+    background-color: rgba($accent, 0.7);
+  }
+
+  &.main {
+    background-color: rgba(255, 255, 255, 0.25);
+
+    &:hover {
+      background-color: $accent-04;
+    }
+  }
+}
+
+.wrapper {
+  text-align: center;
+}
