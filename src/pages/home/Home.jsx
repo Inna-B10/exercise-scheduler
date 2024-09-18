@@ -10,8 +10,8 @@ const navigate = useNavigate()
 
 	return (
 		<LayoutRoot bgImage='images/home-bg.jpg'>
-			<Button clickHandler={() => navigate(!isAuth ? '/auth' : '/new-workout')}>
-				{!isAuth? 'Sign in': 'New'}
+			<Button clickHandler={() => navigate(isAuth ? '/new-workout' : '/auth')}>
+				{isAuth? 'New': 'Sign in'}
 			</Button>
 			<h1 className={styles.heading}>EXERCISES FOR THE SHOULDERS</h1>
 			{/* TODO: Counters */}
