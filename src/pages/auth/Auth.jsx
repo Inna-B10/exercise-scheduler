@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import LayoutRoot from '../LayoutRoot'
+import styles from './Auth.module.scss'
 
 const Auth = () => {
   const [formData, setFormData] = useState({ email: '', password: '', })
@@ -29,7 +30,7 @@ const Auth = () => {
           <input type='email' name='email' value={formData.email} onChange={handleChange} required />
           <label>Password:</label>
           <input type='password' name='password' value={formData.password} onChange={handleChange} required />
-          <button type='submit'>Submit</button>
+          <button type='submit' className={styles.button}>Submit</button>
         </form>
       </div>
     </LayoutRoot>)
