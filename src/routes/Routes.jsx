@@ -1,5 +1,6 @@
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import useAuth from '../hooks/useAuth'
+
 import NotFound from './../pages/not-found/NotFound'
 import { routes } from './routes.data.js'
 
@@ -11,7 +12,13 @@ const Router = () => {
 			<Routes>      
 				{routes.map(route => {
           if (route.auth && !isAuth){
-            return false
+						return(
+							<Route
+								key={route.path}
+								path={route.path}
+								element={<Navigate to="/auth" />}
+							/>
+						)
           }
           return(
 					<Route
