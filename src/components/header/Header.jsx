@@ -8,19 +8,27 @@ import styles from './Header.module.scss'
 const Header = ({ backLink = '' }) => {
 	const { isAuth } = useAuth()
 	const navigate = useNavigate()
-	const {pathname} = useLocation()
+	const { pathname } = useLocation()
 
 	return (
 		<header className={styles.header}>
-			{pathname !== "/" ?  (
-				<button onClick={() => {navigate(backLink)}}>
+			{pathname !== '/' ? (
+				<button
+					onClick={() => {
+						navigate(backLink)
+					}}
+				>
 					<BsArrowLeft />
 				</button>
-			):(
+			) : (
 				<button>
-					<LiaUserCircleSolid onClick={()=>{navigate('/profile')}}/>
+					<LiaUserCircleSolid
+						onClick={() => {
+							navigate('/profile')
+						}}
+					/>
 				</button>
-			) }
+			)}
 			<Hamburger />
 		</header>
 	)

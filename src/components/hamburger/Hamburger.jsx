@@ -1,8 +1,8 @@
-import { useClickAway } from '@uidotdev/usehooks'
 import { useState } from 'react'
+import { useClickAway } from '@uidotdev/usehooks'
 import { IoMdClose, IoMdMenu } from 'react-icons/io'
-import styles from './Hamburger.module.scss'
 import Menu from './Menu'
+import styles from './Hamburger.module.scss'
 
 const Hamburger = () => {
 	const [isShow, setIsShow] = useState(false)

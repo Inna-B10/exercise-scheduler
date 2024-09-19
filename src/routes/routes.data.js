@@ -18,7 +18,7 @@ export const routes = [
 	{
 		path: '/workouts',
 		component: Workouts,
-		auth: true,
+		auth: true
 	},
 	{
 		path: '/new-workout',

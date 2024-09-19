@@ -1,34 +1,34 @@
 @import 'src/assets/styles/variables';
 
 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  padding: 25px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	padding: 25px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
 
-  &.otherPage {
-    height: 280px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: $bx-accent;
+	&.otherPage {
+		height: 280px;
+		border-radius: 0 0 20px 20px;
+		box-shadow: $bx-accent;
 
-    @media (max-width: $mobile) {
-      height: 260px !important;
-    }
-  }
+		@media (max-width: $mobile) {
+			height: 260px !important;
+		}
+	}
 }
 
 .heading {
-  text-transform: uppercase;
-  color: $white;
-  font-size: 30px;
-  font-weight: bold;
+	text-transform: uppercase;
+	color: $white;
+	font-size: 30px;
+	font-weight: bold;
 
-  @media (max-width: $mobile) {
-    font-size: 24px;
-  }
+	@media (max-width: $mobile) {
+		font-size: 24px;
+	}
 }

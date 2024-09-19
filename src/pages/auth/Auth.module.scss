@@ -1,39 +1,39 @@
 @import 'src/assets/styles/variables';
 
 .wrapper-inner-page {
-  padding: 3rem 1.5rem;
+	padding: 3rem 1.5rem;
 
-  > form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
+	> form {
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+	}
 
-  .wrapperButtons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	.wrapperButtons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
-    > div {
-      width: 48%;
+		> div {
+			width: 48%;
 
-      > button {
-        width: 100%;
-        color: $white;
-      }
+			> button {
+				width: 100%;
+				color: $white;
+			}
 
-      &:last-child > button {
-        background-color: #20366b;
+			&:last-child > button {
+				background-color: #20366b;
 
-        &:hover {
-          background-color: #29478c;
-        }
-      }
-    }
-  }
+				&:hover {
+					background-color: #29478c;
+				}
+			}
+		}
+	}
 
-  .error {
-    color: #ad4d5e;
-    font-size: 1rem;
-  }
+	.error {
+		color: #ad4d5e;
+		font-size: 1rem;
+	}
 }

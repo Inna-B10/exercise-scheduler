@@ -4,8 +4,9 @@ import styles from './LayoutRoot.module.scss'
 
 const LayoutRoot = ({ children, bgImage, heading = '', backLink = '/' }) => {
 	return (
-		<section className={cn(styles.wrapper, {[styles.otherPage]: !!heading,})} 
-						 style={{backgroundImage:`url(${bgImage})`}}
+		<section
+			className={cn(styles.wrapper, { [styles.otherPage]: !!heading })}
+			style={{ backgroundImage: `url(${bgImage})` }}
 		>
 			<Header backLink={backLink} />
 

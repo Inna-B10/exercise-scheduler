@@ -31,7 +31,7 @@ npm i react-hook-form
 
 ### TO DO
 
-- [x] React router useHistory
+- [x] React router dom
 - [x] Home page, bg images
 - [ ] Counters
 - [x] Auth page style

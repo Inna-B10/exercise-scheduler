@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import { NavLink } from 'react-router-dom'
-import styles from './Hamburger.module.scss'
 import { menu } from './menu.data.js'
+import styles from './Hamburger.module.scss'
 
 const Menu = isVisible => {
 	const handleLogout = () => {}
