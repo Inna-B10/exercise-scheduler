@@ -1,26 +1,39 @@
 @import 'src/assets/styles/variables';
 
-.wrapperButtons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.wrapper-inner-page {
+  padding: 3rem 1.5rem;
 
-  > div {
-    width: 48%;
+  > form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 
-    > button {
-      width: 100%;
-    }
+  .wrapperButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    &:last-child > button {
-      background-color: #20366b;
-      opacity: 0.8;
-      transition: opacity 0.15s ease;
+    > div {
+      width: 48%;
 
-      &:hover {
-        background-color: #29478c;
-        opacity: 1;
+      > button {
+        width: 100%;
+        color: $white;
+      }
+
+      &:last-child > button {
+        background-color: #20366b;
+
+        &:hover {
+          background-color: #29478c;
+        }
       }
     }
+  }
+
+  .error {
+    color: #ad4d5e;
+    font-size: 1rem;
   }
 }

@@ -1,9 +1,9 @@
 @import 'src/assets/styles/variables';
 
 .header {
+	height: 30px;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 
 	> button {
 		font-size: 30px;

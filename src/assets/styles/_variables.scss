@@ -2,9 +2,9 @@
 $accent: #b53471;
 $white: #f1e8e8;
 $black: #1a0612;
-$hard-dark-accent: darkest($accent, 30%);
-$dark-accent: darkest($accent, 18%);
-$bx-accent: 0 4px 4px rgba($accent, 0.25);
+$hard-dark-accent: darken($accent, 30%);
+$dark-accent: darken($accent, 18%);
+$bx-accent: 0 2px 2px rgba($accent, 0.25);
 $bx-16: 0 3px 6px rgba(0, 0, 0, 0.16);
 $default-font: 'Sofia Sans', sans-serif;
 $mobile: 480px;
