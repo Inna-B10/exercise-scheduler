@@ -5,31 +5,33 @@ import useAuth from '../../hooks/useAuth'
 import Hamburger from '../hamburger/Hamburger'
 import styles from './Header.module.scss'
 
-const Header = ({ backLink = '' }) => {
+const Header = () => {
 	const { isAuth } = useAuth()
 	const navigate = useNavigate()
 	const { pathname } = useLocation()
 
 	return (
 		<header className={styles.header}>
-			{pathname !== '/' ? (
-				<button
-					onClick={() => {
-						navigate(backLink)
-					}}
-				>
-					<BsArrowLeft />
-				</button>
-			) : (
-				<button>
-					<LiaUserCircleSolid
+			{isAuth &&
+				(pathname !== '/' ? (
+					<button
+						onClick={() => {
+							navigate('/')
+						}}
+					>
+						<BsArrowLeft />
+					</button>
+				) : (
+					<button
 						onClick={() => {
 							navigate('/profile')
 						}}
-					/>
-				</button>
-			)}
-			<Hamburger />
+					>
+						<LiaUserCircleSolid />
+					</button>
+				))}
+
+			{isAuth && <Hamburger />}
 		</header>
 	)
 }

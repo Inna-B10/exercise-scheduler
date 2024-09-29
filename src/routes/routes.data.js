@@ -6,14 +6,14 @@ import Profile from './../pages/profile/Profile'
 
 export const routes = [
 	{
-		path: '/',
-		component: Home,
-		auth: false
-	},
-	{
 		path: '/auth',
 		component: Auth,
 		auth: false
+	},
+	{
+		path: '/',
+		component: Home,
+		auth: true
 	},
 	{
 		path: '/workouts',

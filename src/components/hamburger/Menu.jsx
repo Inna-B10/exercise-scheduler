@@ -1,10 +1,18 @@
 import cn from 'clsx'
+import Cookies from 'js-cookie'
 import { NavLink } from 'react-router-dom'
+import useAuth from '../../hooks/useAuth'
+import { TOKEN } from '../../app.constants.js'
 import { menu } from './menu.data.js'
 import styles from './Hamburger.module.scss'
 
-const Menu = isVisible => {
-	const handleLogout = () => {}
+const Menu = ({ isVisible, setIsVisible }) => {
+	const { setIsAuth } = useAuth()
+	const handleLogout = () => {
+		Cookies.remove(TOKEN)
+		setIsAuth(false)
+		setIsVisible(false)
+	}
 
 	return (
 		<nav className={cn(styles.menu, { [styles.show]: isVisible })}>

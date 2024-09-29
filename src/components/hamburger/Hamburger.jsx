@@ -25,7 +25,7 @@ const Hamburger = () => {
 					<IoMdMenu onClick={handleOpenModal} />
 				)}
 			</button>
-			{isShow && <Menu isVisible={isShow} />}
+			{isShow && <Menu isVisible={isShow} setIsVisible={setIsShow} />}
 		</div>
 	)
 }
