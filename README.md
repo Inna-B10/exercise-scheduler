@@ -1,4 +1,4 @@
-# Workout APP - exercise scheduler
+# Workout APP - client side
 
 ## React + Vite
 
@@ -27,6 +27,12 @@ npm install --save-dev @trivago/prettier-plugin-sort-imports
 npm install -D prettier
 
 npm i react-hook-form
+
+npm install axios
+
+npm i @tanstack/react-query
+
+npm i js-cookies
 ```
 
 ### TO DO
@@ -36,5 +42,8 @@ npm i react-hook-form
 - [ ] Counters
 - [x] Auth page style
 - [ ] Auth context
--	[ ] Axios
--	[ ] React Query
+-	[x] Axios
+-	[x] React Query
+- [x] Cors
+- [ ] Notifications/Modal Messages
+- [ ] .env variables
