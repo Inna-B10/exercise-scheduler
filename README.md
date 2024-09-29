@@ -41,9 +41,13 @@ npm i js-cookies
 - [x] Home page, bg images
 - [ ] Counters
 - [x] Auth page style
-- [ ] Auth context
+- [x] Auth context
 -	[x] Axios
 -	[x] React Query
 - [x] Cors
 - [ ] Notifications/Modal Messages
 - [ ] .env variables
+- [x] Redirect after log in
+- [x] Log out
+- [ ] Statistics component
+- [ ] Profile page
