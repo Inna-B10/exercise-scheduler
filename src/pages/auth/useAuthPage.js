@@ -23,7 +23,7 @@ const useAuthPage = () => {
 		}
 	}, [isAuth])
 
-	const { mutate, isLoading } = useMutation({
+	const { mutate, isLoading, error, isError } = useMutation({
 		mutationFn: ({ email, password }) =>
 			AuthService.main(email, password, type),
 		onSuccess: () => {
@@ -42,9 +42,10 @@ const useAuthPage = () => {
 			handleSubmit,
 			errors,
 			isLoading,
-			onSubmit
+			onSubmit,
+			error: isError ? error : null //pass on error.message
 		}),
-		[errors, isLoading]
+		[error, errors, isLoading]
 	)
 }
 

@@ -14,9 +14,8 @@ class AuthService {
 
 			return data
 		} catch (error) {
-			// TODO: Replace alert with modal message
-			alert(error.response.data.message)
-			throw new Error(error)
+			const errorMessage = error.response?.data?.message || error
+			throw new Error(errorMessage)
 		}
 	}
 }

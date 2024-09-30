@@ -1,3 +1,4 @@
+import Alert from '../../components/ui/alert/Alert'
 import Field from '../../components/ui/field/Field'
 import Loader from './../../components/ui/Loader'
 import Button from './../../components/ui/button/Button'
@@ -6,16 +7,23 @@ import useAuthPage from './useAuthPage'
 import styles from './Auth.module.scss'
 
 const Auth = () => {
-	const { errors, handleSubmit, isLoading, onSubmit, register, setType } =
-		useAuthPage()
+	const {
+		errors,
+		handleSubmit,
+		isLoading,
+		onSubmit,
+		register,
+		setType,
+		error
+	} = useAuthPage()
 
 	return (
 		<>
 			<LayoutRoot bgImage='images/auth-bg.png' heading='AUTHENTICATION' />
 
 			<div className={styles['wrapper-inner-page']}>
+				{error && <Alert type='error' text={error.message || error} />}
 				{isLoading && <Loader />}
-
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<Field
 						register={register}
