@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth'
 import Hamburger from '../hamburger/Hamburger'
 import styles from './Header.module.scss'
 
-const Header = () => {
+const Header = ({ backLink = '/' }) => {
 	const { isAuth } = useAuth()
 	const navigate = useNavigate()
 	const { pathname } = useLocation()
@@ -24,7 +24,7 @@ const Header = () => {
 				) : (
 					<button
 						onClick={() => {
-							navigate('/profile')
+							navigate(backLink)
 						}}
 					>
 						<LiaUserCircleSolid />
