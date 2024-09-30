@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
-import userService from '../../services/user.service'
+import UserService from '../../services/user.service'
 
 const useProfile = () => {
 	return useQuery({
 		queryKey: ['get profile'],
-		queryFn: () => userService(),
+		queryFn: () => UserService.getProfile(),
 		select: ({ data }) => data
 	})
 }

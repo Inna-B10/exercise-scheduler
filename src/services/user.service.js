@@ -2,7 +2,15 @@ import { $axios } from '../api'
 
 const USER = '/user'
 
-const userService = async () => {
-	return $axios.get(`${USER}/profile`)
+class UserService {
+	async getProfile() {
+		return $axios.get(`${USER}/profile`)
+	}
 }
-export default userService
+
+export default new UserService()
+
+// const userService = async () => {
+// 	return $axios.get(`${USER}/profile`)
+// }
+// export default userService

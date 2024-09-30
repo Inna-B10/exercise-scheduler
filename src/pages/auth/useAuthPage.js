@@ -3,7 +3,7 @@ import { useMutation } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth'
-import { authService } from '../../services/auth.service'
+import AuthService from '../../services/auth.service'
 
 const useAuthPage = () => {
 	const [type, setType] = useState('login')
@@ -24,7 +24,8 @@ const useAuthPage = () => {
 	}, [isAuth])
 
 	const { mutate, isLoading } = useMutation({
-		mutationFn: ({ email, password }) => authService(email, password, type),
+		mutationFn: ({ email, password }) =>
+			AuthService.main(email, password, type),
 		onSuccess: () => {
 			setIsAuth(true)
 			reset()
