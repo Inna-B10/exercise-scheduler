@@ -1,3 +1,4 @@
+import NewExercise from '../pages/new-exercise/newExercise'
 import Workouts from '../pages/workouts/Workouts'
 import Auth from './../pages/auth/Auth'
 import Home from './../pages/home/Home'
@@ -29,21 +30,22 @@ export const routes = [
 		path: '/profile',
 		component: Profile,
 		auth: true
-	} /* 
+	},
 	{
 		path: '/new-exercise',
 		component: NewExercise,
-		auth: true,
-	},
-
+		auth: true
+	}
+	/*
 	{
 		path: '/workout/:id',
 		component: SingleWorkout,
-		auth: true,
+		auth: true
 	},
 	{
 		path: '/exercise/:id',
 		component: SingleExercise,
-		auth: true,
-	}, */
+		auth: true
+	}
+		*/
 ]
