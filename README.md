@@ -39,7 +39,7 @@ npm i js-cookies
 
 - [x] React router dom
 - [x] Home page, bg images
-- [ ] Counters
+- [x] Counters
 - [x] Auth page style
 - [x] Auth context
 -	[x] Axios
@@ -49,5 +49,6 @@ npm i js-cookies
 - [ ] .env variables
 - [x] Redirect after log in
 - [x] Log out
-- [ ] Statistics component
-- [ ] Profile page
+- [x] Profile page
+- [ ] Form create new exercise
+- [ ] Form create new workout
