@@ -12,6 +12,10 @@ export const menu = [
 		link: '/new-workout'
 	},
 	{
+		title: 'New exercise',
+		link: '/new-exercise'
+	},
+	{
 		title: 'Profile',
 		link: '/profile'
 	}
