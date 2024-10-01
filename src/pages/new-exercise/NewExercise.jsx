@@ -29,8 +29,7 @@ const NewExercise = () => {
 		}
 	})
 	const onSubmit = data => {
-		console.log(data)
-		// mutate(data)
+		mutate(data)
 	}
 
 	return (
@@ -41,7 +40,7 @@ const NewExercise = () => {
 				backLink='/new-workout'
 			/>
 
-			<div className={styles['wrapper-inner-page']}>
+			<div className='wrapper-inner-page'>
 				{error && <Alert type='error' text={error} />}
 				{isSuccess && <Alert text='Exercise created' />}
 				{isLoading && <Loader />}
@@ -53,9 +52,8 @@ const NewExercise = () => {
 						type='text'
 						autoComplete='true'
 						placeholder='Enter name'
-						options={{ required: '* Name field is required' }}
+						options={{ required: '!!  The field for "Name" is required' }}
 					/>
-
 					<Field
 						register={register}
 						name='times'
@@ -63,44 +61,46 @@ const NewExercise = () => {
 						placeholder='Enter times'
 						options={{
 							valueAsNumber: true,
-							validate: value => value > 0 || '* Times must be number',
-							required: '* Times field is required'
+							validate: value => value > 0 || '!! Times must be a number',
+							required: '!! The field for "Times" is required'
 						}}
 					/>
-
-					<div className={styles.error}>
-						<div>{errors?.name?.message}</div>
-						<div>{errors?.times?.message}</div>
-					</div>
-
+					{errors?.name?.message && (
+						<Alert type='error' text={errors?.name?.message} />
+					)}
+					{errors?.times?.message && (
+						<Alert type='error' text={errors?.times?.message} />
+					)}
 					<Controller
 						name='iconPath'
 						control={control}
+						rules={{ required: '!! An icon for exercise is required' }}
 						render={({ field: { value, onChange } }) => (
 							<div className={styles.images}>
-								{data.map(name => (
-									<img
-										key={`ex img ${name}`}
-										src={`${import.meta.env.VITE_SERVER_URL}${getIconPath(
-											name
-										)}`}
-										alt={name}
-										className={cn({
-											[styles.active]: value === getIconPath(name)
-										})}
-										onClick={() => onChange(getIconPath(name))}
-										draggable={false}
-										height='45'
-									/>
-								))}
+								<div>
+									{data.map(name => (
+										<img
+											key={`ex img ${name}`}
+											src={`${import.meta.env.VITE_SERVER_URL}${getIconPath(
+												name
+											)}`}
+											alt={name}
+											title={name}
+											className={cn({
+												[styles.active]: value === getIconPath(name)
+											})}
+											onClick={() => onChange(getIconPath(name))}
+											draggable={false}
+											height='45'
+										/>
+									))}
+								</div>
+								{errors?.iconPath && (
+									<Alert type='error' text={errors?.iconPath?.message} />
+								)}
 							</div>
 						)}
 					/>
-
-					{errors?.iconPath && (
-						<div className='error'>{errors?.iconPath?.message}</div>
-					)}
-
 					<Button>Create</Button>
 				</form>
 			</div>
