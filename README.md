@@ -13,7 +13,7 @@ in additional used:
 ``` js
 npm install gh-pages --save-dev
 
-npm install -g sass
+npm install sass
 
 npm i react-icons --save
 
@@ -33,6 +33,8 @@ npm install axios
 npm i @tanstack/react-query
 
 npm i js-cookies
+
+npm i react-select
 ```
 
 ### TO DO
@@ -45,10 +47,16 @@ npm i js-cookies
 -	[x] Axios
 -	[x] React Query
 - [x] Cors
-- [ ] Notifications/Modal Messages
+- [x] Notifications/~~Modal Messages~~
 - [ ] .env variables
 - [x] Redirect after log in
 - [x] Log out
 - [x] Profile page
-- [ ] Form create new exercise
-- [ ] Form create new workout
+- [x] Create new exercise
+- [x] Create new workout
+- [ ] Change folder *uploads* to *icons* on server+client sides
+- [ ] Exercises page:
+  - [ ] visual
+  - [ ] functional
+
+
