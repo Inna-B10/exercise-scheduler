@@ -1,36 +1,25 @@
-import { useMutation } from '@tanstack/react-query'
-import cn from 'clsx'
-import { Controller, useForm } from 'react-hook-form'
 import Loader from '../../components/ui/Loader'
 import Alert from '../../components/ui/alert/Alert'
 import Button from '../../components/ui/button/Button'
 import Field from '../../components/ui/field/Field'
-import ExerciseService from '../../services/exercises/exercise.service'
 import LayoutRoot from '../LayoutRoot'
-import { getIconPath } from './icon-path.util'
-import styles from './newExercise.module.scss'
+import SelectIcons from './SelectIcons'
+import useNewExercise from './useNewExercise'
+import styles from './NewExercise.module.scss'
 
-const data = ['chest', 'shoulders', 'biceps', 'legs', 'hit', 'back']
+// export const data = ['chest', 'shoulders', 'biceps', 'legs', 'hit', 'back']
 
 const NewExercise = () => {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors },
-		reset,
-		control
-	} = useForm({ mode: 'onChange' })
-
-	const { mutate, isLoading, isSuccess, error } = useMutation({
-		mutationKey: 'create exercise',
-		mutationFn: body => ExerciseService.create(body),
-		onSuccess: () => {
-			reset()
-		}
-	})
-	const onSubmit = data => {
-		mutate(data)
-	}
+		onSubmit,
+		control,
+		error,
+		errors,
+		isLoading,
+		isSuccess
+	} = useNewExercise()
 
 	return (
 		<>
@@ -71,37 +60,16 @@ const NewExercise = () => {
 					{errors?.times?.message && (
 						<Alert type='error' text={errors?.times?.message} />
 					)}
-					<Controller
-						name='iconPath'
-						control={control}
-						rules={{ required: '!! An icon for exercise is required' }}
-						render={({ field: { value, onChange } }) => (
-							<div className={styles.images}>
-								<div>
-									{data.map(name => (
-										<img
-											key={`ex img ${name}`}
-											src={`${import.meta.env.VITE_SERVER_URL}${getIconPath(
-												name
-											)}`}
-											alt={name}
-											title={name}
-											className={cn({
-												[styles.active]: value === getIconPath(name)
-											})}
-											onClick={() => onChange(getIconPath(name))}
-											draggable={false}
-											height='45'
-										/>
-									))}
-								</div>
-								{errors?.iconPath && (
-									<Alert type='error' text={errors?.iconPath?.message} />
-								)}
-							</div>
-						)}
-					/>
-					<Button>Create</Button>
+
+					<div className={styles.images}>
+						<SelectIcons control={control} />
+					</div>
+					{errors?.iconPath && (
+						<Alert type='error' text={errors?.iconPath?.message} />
+					)}
+					<div style={{ marginTop: '3rem' }}>
+						<Button>Create</Button>
+					</div>
 				</form>
 			</div>
 		</>
