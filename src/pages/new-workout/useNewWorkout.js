@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form'
-import WorkoutService from '../../services/workouts/workout.service'
+import WorkoutService from '../../services/workout/workout.service.js'
 
 const useNewWorkout = () => {
 	const {

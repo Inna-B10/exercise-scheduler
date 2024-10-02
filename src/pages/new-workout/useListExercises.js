@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import ExerciseService from '../../services/exercises/exercise.service'
+import ExerciseService from '../../services/exercise/exercise.service.js'
 
 const useListExercises = () => {
 	return useQuery({
