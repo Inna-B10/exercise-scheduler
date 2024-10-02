@@ -1,5 +1,6 @@
 import NewExercise from '../pages/new-exercise/newExercise'
-import Workouts from '../pages/workouts/Workouts'
+import ListWorkouts from '../pages/workout/ListWorkouts'
+import Workout from '../pages/workout/Workout'
 import Auth from './../pages/auth/Auth'
 import Home from './../pages/home/Home'
 import NewWorkout from './../pages/new-workout/NewWorkout'
@@ -17,11 +18,6 @@ export const routes = [
 		auth: true
 	},
 	{
-		path: '/workouts',
-		component: Workouts,
-		auth: true
-	},
-	{
 		path: '/new-workout',
 		component: NewWorkout,
 		auth: true
@@ -35,16 +31,21 @@ export const routes = [
 		path: '/new-exercise',
 		component: NewExercise,
 		auth: true
-	}
-	/*
+	},
 	{
-		path: '/workout/:id',
-		component: SingleWorkout,
+		path: '/workouts/:id',
+		component: Workout,
 		auth: true
 	},
 	{
+		path: '/workouts',
+		component: ListWorkouts,
+		auth: true
+	}
+	/*
+	{
 		path: '/exercise/:id',
-		component: SingleExercise,
+		component: Exercise,
 		auth: true
 	}
 		*/
