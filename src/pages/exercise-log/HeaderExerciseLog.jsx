@@ -14,7 +14,7 @@ const HeaderExerciseLog = ({ isSuccess, exerciseLog }) => {
 		>
 			<Header
 				backLink={
-					isSuccess ? `/workout/${exerciseLog.workoutLog}` : '/workouts'
+					isSuccess ? `/workout/${exerciseLog.workoutLogId}` : '/workouts'
 				}
 			/>
 
