@@ -1,11 +1,11 @@
 @use "sass:color";
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+$default-font: 'Sofia Sans', sans-serif;
 $accent: #b53471;
 $white: #f1e8e8;
 $black: #1a0612;
-$hard-dark-accent: color.adjust($accent, $lightness: -30%);
 $dark-accent: color.adjust($accent, $lightness: -18%);
+$hard-dark-accent: color.adjust($accent, $lightness: -30%);
 $bx-accent: 0 2px 2px rgba($accent, 0.25);
 $bx-16: 0 3px 6px rgba(0, 0, 0, 0.16);
-$default-font: 'Sofia Sans', sans-serif;
 $mobile: 480px;

@@ -3,7 +3,7 @@ import Header from '../../components/header/Header'
 import Loader from '../../components/ui/Loader'
 import Statistics from './statistics/Statistics'
 import useProfile from './useProfile'
-import stylesLayout from '../LayoutRoot.module.scss'
+import stylesRoot from '../LayoutRoot.module.scss'
 import styles from './Profile.module.scss'
 
 const Profile = () => {
@@ -12,7 +12,7 @@ const Profile = () => {
 	return (
 		<>
 			<div
-				className={cn(stylesLayout.wrapper, stylesLayout.otherPage)}
+				className={cn(stylesRoot.wrapper, stylesRoot.otherPage)}
 				style={{
 					backgroundImage: `url('images/profile-bg.jpg')`,
 					height: 356
@@ -30,7 +30,7 @@ const Profile = () => {
 								height={56}
 								draggable={false}
 							/>
-							<h1 className={stylesLayout.heading}>{data?.email}</h1>
+							<h1 className={stylesRoot.heading}>{data?.email}</h1>
 						</>
 					)}
 				</div>
