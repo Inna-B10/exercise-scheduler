@@ -36,8 +36,6 @@ const Workout = () => {
 					<Loader />
 				) : (
 					<div className={styles.wrapper}>
-						{console.log(workoutLog.exerciseLogs)}
-
 						{workoutLog?.exerciseLogs?.map((exerciseLog, index) => (
 							<Fragment key={exerciseLog.id}>
 								<ExerciseItem exerciseLog={exerciseLog} />
