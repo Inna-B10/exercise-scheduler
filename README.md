@@ -65,7 +65,8 @@ npm i react-select
 - [ ] Exercise page:
   - [x] design
   - [x] exercise log
-  - [x] sets log
+  - [ ] sets log
+    - [ ] fix bug with weight input
   - [ ] isCompleted
 
 
