@@ -36,11 +36,12 @@ const Workout = () => {
 					<Loader />
 				) : (
 					<div className={styles.wrapper}>
-						{console.log(workoutLog.exerciseLog)}
-						{workoutLog?.exerciseLog?.map((log, index) => (
-							<Fragment key={log.id}>
-								<ExerciseItem exerciseLog={log} />
-								{index !== workoutLog.exerciseLog.length - 1 && (
+						{console.log(workoutLog.exerciseLogs)}
+
+						{workoutLog?.exerciseLogs?.map((exerciseLog, index) => (
+							<Fragment key={exerciseLog.id}>
+								<ExerciseItem exerciseLog={exerciseLog} />
+								{index !== workoutLog.exerciseLogs.length - 1 && (
 									<div className={styles.line} />
 								)}
 							</Fragment>
