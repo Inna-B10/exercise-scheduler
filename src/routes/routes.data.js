@@ -1,6 +1,7 @@
+import ExerciseLog from '../pages/exercise-log/ExerciseLog'
 import NewExercise from '../pages/new-exercise/newExercise'
-import ListWorkouts from '../pages/workout/ListWorkouts'
-import Workout from '../pages/workout/Workout'
+import Workout from '../pages/workouts/detail/Workout'
+import ListWorkouts from '../pages/workouts/list/ListWorkouts'
 import Auth from './../pages/auth/Auth'
 import Home from './../pages/home/Home'
 import NewWorkout from './../pages/new-workout/NewWorkout'
@@ -41,12 +42,10 @@ export const routes = [
 		path: '/workouts',
 		component: ListWorkouts,
 		auth: true
-	}
-	/*
+	},
 	{
 		path: '/exercise/:id',
-		component: Exercise,
+		component: ExerciseLog,
 		auth: true
 	}
-		*/
 ]
