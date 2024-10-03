@@ -57,11 +57,15 @@ npm i react-select
 - [ ] Change folder *uploads* to *icons* on server+client sides
 - [ ] fix backLink
 - [ ] Workout page
-  - [x] visual
+  - [x] design
   - [x] get statistic
-  - [ ] workout log
-- [ ] Exercises page:
-  - [ ] visual
-  - [ ] functional
+  - [x] workout log
+  - [x] workouts list
+  - [ ] isCompleted
+- [ ] Exercise page:
+  - [x] design
+  - [x] exercise log
+  - [x] sets log
+  - [ ] isCompleted
 
 
