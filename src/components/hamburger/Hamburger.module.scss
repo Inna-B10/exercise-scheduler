@@ -1,5 +1,5 @@
-@import 'src/assets/styles/variables';
-@import 'src/assets/styles/animations';
+@import '/src/assets/styles/variables';
+@import '/src/assets/styles/animations';
 
 .wrapper {
 	position: relative;
@@ -21,7 +21,7 @@
 		font-size: 16px;
 		box-shadow: $bx-16;
 		border-radius: 10px 0 10px 10px;
-		min-width: 116px;
+		min-width: 121px;
 		display: none;
 		animation: opacity 0.4s;
 
