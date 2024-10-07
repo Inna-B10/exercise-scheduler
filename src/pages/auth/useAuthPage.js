@@ -24,6 +24,7 @@ const useAuthPage = () => {
 	}, [isAuth])
 
 	const { mutate, isLoading, error, isError } = useMutation({
+		mutationKey: ['auth'],
 		mutationFn: ({ email, password }) =>
 			AuthService.main(email, password, type),
 		onSuccess: () => {

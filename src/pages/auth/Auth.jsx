@@ -19,10 +19,10 @@ const Auth = () => {
 
 	return (
 		<>
-			<LayoutRoot bgImage='images/auth-bg.png' heading='AUTHENTICATION' />
+			<LayoutRoot bgImage='images/auth-bg.jpg' heading='AUTHENTICATION' />
 
 			<div className={styles['wrapper-inner-page']}>
-				{error && <Alert type='error' text={error.message || error} />}
+				{error && <Alert type='error' text={error.message} />}
 				{isLoading && <Loader />}
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<Field
