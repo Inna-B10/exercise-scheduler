@@ -9,9 +9,16 @@ const Home = () => {
 
 	return (
 		<LayoutRoot bgImage='images/home-bg.jpg'>
-			<Button clickHandler={() => navigate('/new-workout')}>New</Button>
-			<h1 className={styles.heading}>EXERCISES FOR THE SHOULDERS</h1>
-			<Statistics />
+			<div className={styles.wrapper}>
+				<h1 className={styles.heading}>
+					Stronger Every Rep,
+					<br /> Better Every Day!
+				</h1>
+				<Button clickHandler={() => navigate('/new-workout')}>
+					New workout
+				</Button>
+				<Statistics />
+			</div>
 		</LayoutRoot>
 	)
 }
