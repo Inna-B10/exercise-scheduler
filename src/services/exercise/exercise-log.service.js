@@ -14,12 +14,12 @@ class ExerciseLogService {
 
 	// "weight":10,
 	// "repeat": 20,
-	// "isCompleted": true
+	// "isCompleted": true,
 	async updateTime(timeId, body) {
 		return $axios.put(`${LOG}/time/${timeId}`, body)
 	}
 
-	// "isComplete": true
+	// "isCompleted": true
 	async complete(id, body) {
 		return $axios.patch(`${LOG}/complete/${id}`, body)
 	}

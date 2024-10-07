@@ -7,8 +7,6 @@ import SelectIcons from './SelectIcons'
 import useNewExercise from './useNewExercise'
 import styles from './NewExercise.module.scss'
 
-// export const data = ['chest', 'shoulders', 'biceps', 'legs', 'hit', 'back']
-
 const NewExercise = () => {
 	const {
 		register,
@@ -27,6 +25,7 @@ const NewExercise = () => {
 				bgImage='images/new-exercise-bg.jpg'
 				heading='Create New Exercise'
 				backLink='/new-workout'
+				title='New workout'
 			/>
 
 			<div className='wrapper-inner-page'>

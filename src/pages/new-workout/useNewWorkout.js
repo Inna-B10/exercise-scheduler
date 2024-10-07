@@ -13,7 +13,7 @@ const useNewWorkout = () => {
 	} = useForm({ mode: 'onChange' })
 
 	const { mutate, isLoading, isSuccess, error } = useMutation({
-		mutationKey: 'create workout',
+		mutationKey: ['create workout'],
 		mutationFn: body => WorkoutService.create(body),
 		onSuccess: () => {
 			reset({

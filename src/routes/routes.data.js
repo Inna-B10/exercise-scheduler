@@ -1,5 +1,5 @@
 import ExerciseLog from '../pages/exercise-log/ExerciseLog'
-import NewExercise from '../pages/new-exercise/newExercise'
+import NewExercise from '../pages/new-exercise/NewExercise'
 import Workout from '../pages/workouts/detail/Workout'
 import ListWorkouts from '../pages/workouts/list/ListWorkouts'
 import Auth from './../pages/auth/Auth'

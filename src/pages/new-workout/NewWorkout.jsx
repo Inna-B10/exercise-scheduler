@@ -24,6 +24,8 @@ const NewWorkout = () => {
 			<LayoutRoot
 				bgImage='images/new-workout-bg.jpg'
 				heading='Create New Workout'
+				backLink='/workouts'
+				title='To all workouts'
 			/>
 
 			<div className='wrapper-inner-page'>

@@ -12,7 +12,7 @@ const HeaderWorkout = ({ workoutLog, isSuccess }) => {
 				height: 356
 			}}
 		>
-			<Header backLink='/workouts' />
+			<Header backLink='/workouts' title='To all workouts' />
 
 			{isSuccess && (
 				<div>

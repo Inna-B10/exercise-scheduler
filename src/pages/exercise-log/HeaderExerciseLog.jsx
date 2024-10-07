@@ -8,14 +8,15 @@ const HeaderExerciseLog = ({ isSuccess, exerciseLog }) => {
 		<div
 			className={cn(stylesRoot.wrapper, stylesRoot.otherPage)}
 			style={{
-				backgroundImage: `url('images/ex-bg-1.jpg')`,
+				backgroundImage: `url('images/ex-bg.jpg')`,
 				height: 300
 			}}
 		>
 			<Header
 				backLink={
-					isSuccess ? `/workout/${exerciseLog.workoutLogId}` : '/workouts'
+					isSuccess ? `/workouts/${exerciseLog.workoutLogId}` : '/workouts'
 				}
+				title='To workout'
 			/>
 
 			{isSuccess && (
