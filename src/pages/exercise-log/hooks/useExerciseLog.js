@@ -17,14 +17,9 @@ export const useExerciseLog = () => {
 		queryKey: ['get exercise log', id],
 		queryFn: () => ExerciseLogService.getById(id),
 		select: ({ data }) => data
-		// onSuccess: data => {
-		// 	if (data?.times?.length) {
-		// 		setTimes(data.times)
-		// 	}
-		// }
 	})
 
-	const { errorChange, updateTime } = useUpdateLogTime()
+	const { error, updateTime } = useUpdateLogTime(exerciseLog?.times)
 
 	const onChangeState = (timeId, key, value) => {
 		const newTimes = exerciseLog.times.map(time => {
@@ -40,7 +35,7 @@ export const useExerciseLog = () => {
 	}
 
 	const getTime = timeId => {
-		return exerciseLog?.times?.find(time => time.id === timeId)
+		return exerciseLog?.times.find(time => time.id === timeId)
 	}
 
 	const getState = (timeId, key) => {
@@ -66,7 +61,7 @@ export const useExerciseLog = () => {
 		isSuccess,
 		isLoading,
 		toggleTime,
-		errorChange,
+		error,
 		onChangeState,
 		getState
 	}
