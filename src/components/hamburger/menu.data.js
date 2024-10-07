@@ -4,11 +4,11 @@ export const menu = [
 		link: '/'
 	},
 	{
-		title: 'Workouts',
+		title: 'All workouts',
 		link: '/workouts'
 	},
 	{
-		title: 'Create new',
+		title: 'New workout',
 		link: '/new-workout'
 	},
 	{

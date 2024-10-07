@@ -1,4 +1,4 @@
-@import 'src/assets/styles/variables';
+@import '/src/assets/styles/_variables';
 
 .header {
 	height: 30px;
@@ -11,5 +11,9 @@
 		> svg > path {
 			fill: #fff;
 		}
+	}
+
+	.levelUp {
+		rotate: -90deg;
 	}
 }
