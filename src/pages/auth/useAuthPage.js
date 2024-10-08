@@ -17,12 +17,6 @@ const useAuthPage = () => {
 	const { isAuth, setIsAuth } = useAuth()
 	const navigate = useNavigate()
 
-	useEffect(() => {
-		if (isAuth) {
-			navigate('/')
-		}
-	}, [isAuth])
-
 	const { mutate, isLoading, error, isError } = useMutation({
 		mutationKey: ['auth'],
 		mutationFn: ({ email, password }) =>
@@ -32,6 +26,12 @@ const useAuthPage = () => {
 			reset()
 		}
 	})
+	useEffect(() => {
+		if (isAuth) {
+			navigate('/profile')
+		}
+	}, [isAuth])
+
 	const onSubmit = data => {
 		mutate(data)
 	}

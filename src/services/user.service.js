@@ -5,7 +5,14 @@ const USER = '/user'
 /* -------------------------------- As Class -------------------------------- */
 class UserService {
 	async getProfile() {
-		return $axios.get(`${USER}/profile`)
+		try {
+			const response = await $axios.get(`${USER}/profile`)
+			console.log(response.data)
+			return response
+		} catch (error) {
+			console.error('Error fetching profile:', error)
+			throw error // Прокидываем ошибку дальше
+		}
 	}
 }
 
