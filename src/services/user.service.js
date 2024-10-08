@@ -7,7 +7,6 @@ class UserService {
 	async getProfile() {
 		try {
 			const response = await $axios.get(`${USER}/profile`)
-			console.log(response.data)
 			return response
 		} catch (error) {
 			console.error('Error fetching profile:', error)

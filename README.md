@@ -55,18 +55,19 @@ npm i react-select
 - [x] Create new exercise
 - [x] Create new workout
 - [ ] Change folder *uploads* to *icons* on server+client sides
-- [ ] fix backLink
-- [ ] Workout page
+- [x] fix backLink
+- [x] Workout page
   - [x] design
   - [x] get statistic
   - [x] workout log
   - [x] workouts list
-  - [ ] isCompleted
+  - [x] isCompleted
 - [ ] Exercise page:
   - [x] design
   - [x] exercise log
-  - [ ] sets log
+  - [x] sets log
     - [ ] fix bug with weight input
-  - [ ] isCompleted
+  - [x] isCompleted
+- [x] BUG after login/registration: token created but can uses only after refresh
 
 
