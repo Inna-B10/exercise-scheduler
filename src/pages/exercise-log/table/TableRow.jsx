@@ -2,7 +2,6 @@ import cn from 'clsx'
 import styles from '../ExerciseLog.module.scss'
 
 const TableRow = ({ item, getState, onChangeState, toggleTime }) => {
-	console.log(item)
 	return (
 		<div
 			className={cn(styles.row, {
@@ -10,10 +9,7 @@ const TableRow = ({ item, getState, onChangeState, toggleTime }) => {
 			})}
 			key={`time ${item.id}`}
 		>
-			<div
-				className={styles.opacity}
-				key={`Prev ${item.id}/${item.prevWeight}`}
-			>
+			<div className={styles.opacity} key={`Prev ${item.id}`}>
 				<input
 					type='number'
 					defaultValue={item.prevWeight}
@@ -29,15 +25,11 @@ const TableRow = ({ item, getState, onChangeState, toggleTime }) => {
 				/>
 			</div>
 
-			<div key={`RepeatWeight ${item.id}/${item.weight}`}>
+			<div key={`RepeatWeight ${item.id}`}>
 				<input
-					// type='tel'
-					// pattern='[0-9]*'
 					type='number'
 					value={getState(item.id, 'weight')}
 					onChange={e => onChangeState(item.id, 'weight', e.target.value)}
-					// onBlur={e => onChangeState(item.id, 'weight', e.target.value)}
-					// onChange={e => e.target.value}
 					disabled={item.isCompleted}
 					name='weight'
 				/>
@@ -51,7 +43,7 @@ const TableRow = ({ item, getState, onChangeState, toggleTime }) => {
 				/>
 			</div>
 
-			<div key={`Completed ${item.id}/${item.isCompleted}`}>
+			<div key={`Completed ${item.id}`}>
 				<img
 					src={
 						getState(item.id, 'isCompleted')

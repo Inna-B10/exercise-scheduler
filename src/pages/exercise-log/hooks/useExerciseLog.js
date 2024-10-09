@@ -31,7 +31,6 @@ export const useExerciseLog = () => {
 		})
 		exerciseLog.times = newTimes
 		setTimes(newTimes)
-		console.log(exerciseLog.times)
 	}
 
 	const getTime = timeId => {
@@ -49,7 +48,7 @@ export const useExerciseLog = () => {
 		updateTime({
 			timeId,
 			body: {
-				isCompleted,
+				isCompleted: isCompleted,
 				repeat: +time.repeat,
 				weight: +time.weight
 			}

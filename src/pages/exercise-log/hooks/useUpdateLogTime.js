@@ -5,9 +5,7 @@ import { useCompleteLog } from './useCompleteLog'
 
 export const useUpdateLogTime = times => {
 	const { id } = useParams()
-
 	const queryClient = useQueryClient()
-
 	const { completeLog, errorCompleted } = useCompleteLog()
 
 	const { mutate, error: errorChange } = useMutation({
@@ -16,9 +14,17 @@ export const useUpdateLogTime = times => {
 			ExerciseLogService.updateTime(timeId, body),
 		onSuccess: () => {
 			queryClient.invalidateQueries(['get exercise log', id]).then(() => {
-				const filteredTimes = times.filter(time => time.isCompleted)
+				// Получаем обновленные данные из кэша
+				const updatedExerciseLog = queryClient.getQueryData([
+					'get exercise log',
+					id
+				]).data
 
-				if (filteredTimes.length === times.length - 1) {
+				const filteredTimes = updatedExerciseLog?.times.filter(
+					time => time.isCompleted
+				)
+
+				if (filteredTimes.length === updatedExerciseLog.times.length) {
 					completeLog({ isCompleted: true })
 				}
 			})
