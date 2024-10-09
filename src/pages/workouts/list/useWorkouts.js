@@ -5,7 +5,7 @@ import WorkoutLogService from '../../../services/workout/workout-log.service'
 import WorkoutService from '../../../services/workout/workout.service'
 
 export const useWorkouts = () => {
-	const { data, isSuccess } = useQuery({
+	const { data, isSuccess, isLoading, error } = useQuery({
 		queryKey: ['get workouts'],
 		queryFn: () => WorkoutService.getAll(),
 		select: ({ data }) => data
@@ -15,9 +15,9 @@ export const useWorkouts = () => {
 
 	const {
 		mutate,
-		isLoading,
+		isLoading: isLoadingMutate,
 		isSuccess: isSuccessMutate,
-		error
+		error: errorMutate
 	} = useMutation({
 		mutationKey: ['create new workout log'],
 		mutationFn: workoutId => WorkoutLogService.create(workoutId),
@@ -30,12 +30,14 @@ export const useWorkouts = () => {
 		() => ({
 			data,
 			isSuccess,
-			mutate,
 			isLoading,
+			error,
+			mutate,
+			isLoadingMutate,
 			isSuccessMutate,
-			error
+			errorMutate
 		}),
 
-		[error, isLoading, isSuccess]
+		[error, errorMutate, isLoading, isLoadingMutate, isSuccess, isLoadingMutate]
 	)
 }

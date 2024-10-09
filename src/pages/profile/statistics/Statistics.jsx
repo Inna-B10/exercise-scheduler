@@ -1,9 +1,6 @@
-import useProfile from '../useProfile'
 import styles from './Statistics.module.scss'
 
-const Statistics = () => {
-	const { data } = useProfile()
-
+const Statistics = ({ data }) => {
 	return (
 		<div className={styles.wrapper}>
 			{data?.statistics?.map(statistic => (

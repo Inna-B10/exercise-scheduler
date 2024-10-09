@@ -7,7 +7,7 @@ import stylesRoot from '../LayoutRoot.module.scss'
 import styles from './Profile.module.scss'
 
 const Profile = () => {
-	const { data, isLoading } = useProfile()
+	const { data, isLoading, error } = useProfile()
 
 	return (
 		<>
@@ -34,12 +34,13 @@ const Profile = () => {
 						</>
 					)}
 				</div>
-				<Statistics />
+				<Statistics data={data} />
 			</div>
 			<div
 				className='wrapper-inner-page'
 				style={{ paddingLeft: 0, paddingRight: 0 }}
 			>
+				{error && <p>{error.message}</p>}
 				<div className={styles.before_after}>
 					{data?.images?.map((image, index) => (
 						<div key={image}>
