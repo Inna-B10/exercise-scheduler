@@ -5,7 +5,8 @@ const LOG = `${EXERCISES}/log`
 
 class ExerciseLogService {
 	async getById(id) {
-		return $axios.get(`${LOG}/${id}`)
+		const response = await $axios.get(`${LOG}/${id}`)
+		return response
 	}
 
 	async create(exerciseId) {
@@ -16,12 +17,14 @@ class ExerciseLogService {
 	// "repeat": 20,
 	// "isCompleted": true,
 	async updateTime(timeId, body) {
-		return $axios.put(`${LOG}/time/${timeId}`, body)
+		const response = await $axios.put(`${LOG}/time/${timeId}`, body)
+		return response
 	}
 
 	// "isCompleted": true
 	async complete(id, body) {
-		return $axios.patch(`${LOG}/complete/${id}`, body)
+		const response = await $axios.patch(`${LOG}/complete/${id}`, body)
+		return response
 	}
 }
 

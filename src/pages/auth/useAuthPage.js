@@ -28,7 +28,7 @@ const useAuthPage = () => {
 	})
 	useEffect(() => {
 		if (isAuth) {
-			navigate('/profile')
+			navigate('/')
 		}
 	}, [isAuth])
 
