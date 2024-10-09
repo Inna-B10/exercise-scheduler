@@ -30,6 +30,7 @@ const TableRow = ({ item, getState, onChangeState, toggleTime }) => {
 					type='number'
 					value={getState(item.id, 'weight')}
 					onChange={e => onChangeState(item.id, 'weight', e.target.value)}
+					onFocus={e => e.target.select()}
 					disabled={item.isCompleted}
 					name='weight'
 				/>
@@ -38,6 +39,7 @@ const TableRow = ({ item, getState, onChangeState, toggleTime }) => {
 					type='number'
 					value={getState(item.id, 'repeat')}
 					onChange={e => onChangeState(item.id, 'repeat', e.target.value)}
+					onFocus={e => e.target.select()}
 					disabled={item.isCompleted}
 					name='repeat'
 				/>

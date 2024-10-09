@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
 import ExerciseLogService from '../../../services/exercise/exercise-log.service'
@@ -18,23 +18,27 @@ export const useExerciseLog = () => {
 		queryFn: () => ExerciseLogService.getById(id),
 		select: ({ data }) => data
 	})
+	useEffect(() => {
+		if (isSuccess && exerciseLog?.times?.length) {
+			setTimes(exerciseLog.times)
+		}
+	}, [isSuccess, exerciseLog])
 
 	const { error, updateTime } = useUpdateLogTime(exerciseLog?.times)
 
 	const onChangeState = (timeId, key, value) => {
-		const newTimes = exerciseLog.times.map(time => {
+		const newTimes = times.map(time => {
 			if (time.id === timeId) {
 				return { ...time, [key]: value }
 			}
 
 			return time
 		})
-		exerciseLog.times = newTimes
 		setTimes(newTimes)
 	}
 
 	const getTime = timeId => {
-		return exerciseLog?.times.find(time => time.id === timeId)
+		return times.find(time => time.id === timeId)
 	}
 
 	const getState = (timeId, key) => {
