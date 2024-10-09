@@ -61,13 +61,15 @@ npm i react-select
   - [x] get statistic
   - [x] workout log
   - [x] workouts list
-  - [x] isCompleted
-- [ ] Exercise page:
+  - [x] workout completed button
+- [x] Exercise page:
   - [x] design
   - [x] exercise log
-  - [x] sets log
-    - [ ] fix bug with weight input
   - [x] isCompleted
+  - [x] tasks log
+    - [x] BUG: weight input rerenders after every digit 
+    - [x] BUG: count of completed tasks / isCompleted Exercise
+    - [x] BUG: input fields are unavailable after changing task status
 - [x] BUG after login/registration: token created but can uses only after refresh
 
 
