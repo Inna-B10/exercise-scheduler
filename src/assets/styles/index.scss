@@ -123,7 +123,6 @@ input[type='number'] {
 .select2-selection {
 	&__control {
 		cursor: pointer !important;
-		// margin-bottom: 2rem;
 		border-radius: 10px !important;
 		min-height: 48px !important;
 		background-color: $dark-accent !important;
@@ -197,12 +196,3 @@ input[type='number'] {
 }
 
 /* ---------------------------- END React Select ---------------------------- */
-// .img-responsive {
-// 	display: block;
-// 	max-width: 100%;
-// 	height: auto;
-// }
-// .error {
-// 	color: #8d2b3d;
-// 	font-size: 1rem;
-// }

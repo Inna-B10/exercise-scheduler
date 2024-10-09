@@ -10,7 +10,7 @@ const SelectIcons = ({ control }) => {
 		<Controller
 			name='iconPath'
 			control={control}
-			rules={{ required: '!! An icon for exercise is required' }}
+			rules={{ required: '!! An exercise icon is required' }}
 			render={({ field: { value, onChange } }) =>
 				data.map(name => (
 					<img

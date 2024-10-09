@@ -2,7 +2,7 @@ import { $axios } from '../api'
 
 const USER = '/user'
 
-/* -------------------------------- As Class -------------------------------- */
+/* -------------------------------- As a Class ------------------------------- */
 class UserService {
 	async getProfile() {
 		try {
@@ -17,7 +17,7 @@ class UserService {
 
 export default new UserService()
 
-/* ------------------------------- As Function ------------------------------ */
+/* ------------------------------- As a Function ---------------------------- */
 // const userService = async () => {
 // 	return $axios.get(`${USER}/profile`)
 // }

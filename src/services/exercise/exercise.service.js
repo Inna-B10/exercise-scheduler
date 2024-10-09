@@ -2,7 +2,7 @@ import { $axios } from '../../api'
 
 export const EXERCISES = '/exercises'
 
-/* -------------------------------- As Class -------------------------------- */
+/* -------------------------------- As a Class ------------------------------ */
 class ExerciseService {
 	async getAll() {
 		return $axios.get(EXERCISES)
@@ -24,7 +24,7 @@ class ExerciseService {
 
 export default new ExerciseService()
 
-/* ------------------------------ As Functions ------------------------------ */
+/* ------------------------------ As a Functions ---------------------------- */
 // async function getAllExercises() {
 //     return $axios.get(EXERCISES);
 // }

@@ -38,9 +38,7 @@ const Workout = () => {
 				className='wrapper-inner-page'
 				style={{ paddingLeft: 0, paddingRight: 0 }}
 			>
-				<div style={{ width: '90%', margin: '0 auto' }}>
-					{/* {errorCompleted && <Alert type='error' text={errorCompleted} />} */}
-				</div>
+				<div style={{ width: '90%', margin: '0 auto' }}></div>
 				{isLoading ? (
 					<Loader />
 				) : (
